@@ -1,0 +1,15 @@
+{
+  "name": "webpack-test-demo",
+  "version": "0.1.0",
+  "description": "webpack test demo",
+  "main": "index.js",
+  "repository": "git@github.com:DUANQY0818/webpack-test-demo.git",
+  "author": "DQY0818 <duanqy0818@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.1"
+  }
+}

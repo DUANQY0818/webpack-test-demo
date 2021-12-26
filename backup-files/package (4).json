@@ -1,0 +1,70 @@
+{
+  "name": "my-webpack-project",
+  "version": "1.0.0",
+  "bin": {
+    "ddl": "bin/index.js"
+  },
+  "description": "My webpack project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve --config webpack.config.js",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "lint": "npx eslint --no-eslintrc -c .eslintrc.js ./ ",
+    "lint:fix": "npx eslint  --fix --no-eslintrc -c .eslintrc.js ./ ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DYC910818/dl-cli-webpack5.git"
+  },
+  "keywords": [
+    "webpack",
+    "spa",
+    "build"
+  ],
+  "author": "duanqy <duanqy0818@163.com> (https://github.com/DYC910818)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DYC910818/dl-cli-webpack5/issues"
+  },
+  "homepage": "https://github.com/DYC910818/dl-cli-webpack5#readme",
+  "dependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.13",
+    "@babel/plugin-transform-arrow-functions": "^7.12.1",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-typescript": "^7.12.7",
+    "@dqyfp/down-github-repo": "^1.0.2",
+    "@dqyfp/eslint-config-base": "^0.0.1",
+    "@dqyfp/prettier-config-base": "^0.0.1",
+    "@dqyfp/stylelint-config-base": "^0.0.1",
+    "@webpack-cli/init": "^1.1.3",
+    "commander": "^7.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.18.0",
+    "eslint-webpack-plugin": "^2.4.1",
+    "webpack": "^5.20.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^5.0.0",
+    "husky": "^4.3.8",
+    "mini-css-extract-plugin": "^1.3.5",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
